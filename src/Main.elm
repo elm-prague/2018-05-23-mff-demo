@@ -1,7 +1,12 @@
-module Main exposing (..)
+module Main exposing (main)
 
-import Html exposing (Html, text, div, h1, img)
-import Html.Attributes exposing (src)
+import Html exposing (Attribute, Html, button, code, div, form, h1, h4, img, input, li, pre, program, span, text, ul)
+import Html.Attributes exposing (class, src, type_)
+import Html.Events as Events
+import Http
+import Json.Decode
+import Json.Decode.Pipeline
+import RemoteData
 
 
 ---- MODEL ----
@@ -36,8 +41,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ img [ src "/logo.svg" ] []
-        , h1 [] [ text "Your Elm App is working!" ]
+        [ h1 [] [ text "Your Elm App is working!" ]
         ]
 
 
@@ -47,7 +51,7 @@ view model =
 
 main : Program Never Model Msg
 main =
-    Html.program
+    program
         { view = view
         , init = init
         , update = update
