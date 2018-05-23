@@ -1,3 +1,42 @@
+# MFF Firemní semináře - Elm: funkcionální front-end v praxi
+
+- [Firemní semináře](http://d3s.mff.cuni.cz/teaching/commercial_workshops/)
+- [ElmPrague](https://www.meetup.com/ElmPrague/)
+
+## Requirements
+
+* Node.js version based on `./.nvmrc`
+
+Then run:
+
+```bash
+npm install --global yarn
+```
+
+## Install packages
+
+```bash
+yarn install
+yarn elm:install --yes
+```
+
+## Run Dev Server
+
+* run WebPack (JavaScript and Elm compiler + dev server):
+
+```bash
+yarn dev
+```
+
+## Useful Links
+
+- [HTML to Elm](https://mbylstra.github.io/html-to-elm/)
+- [JSON to Elm](http://noredink.github.io/json-to-elm/)
+- [Pixabay API](https://pixabay.com/api/docs/#api_search_images)
+- [Bootstrap](https://getbootstrap.com/docs/4.0/components/alerts/)
+
+---
+
 This project is bootstrapped with [Create Elm App](https://github.com/halfzebra/create-elm-app).
 
 Below you will find some information on how to perform basic tasks.

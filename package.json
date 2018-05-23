@@ -1,0 +1,39 @@
+{
+  "name": "mff-demo",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MPL-2.0",
+  "scripts": {
+    "dev": "run-s dev:start",
+    "dev:start": "cross-env BROWSER=none elm-app start",
+    "dev:nodebug": "cross-env ELM_DEBUGGER=false run-s dev",
+    "build": "run-s build:app",
+    "build:app": "elm-app build",
+    "precommit": "run-s --print-name format test i18n:missing-translations",
+    "format": "run-s format:elm-format format:prettier",
+    "format:elm-format": "elm-format --yes ./src/ ./tests/",
+    "format:prettier": "prettier --write \"bin/**/*.js\" \"src/**/*.js\" \"src/**/*.json\" elm-analyse.json",
+    "elm:analyse": "elm-analyse --elm-format-path ./node_modules/.bin/elm-format",
+    "elm:analyse:serve": "run-s \"elm:analyse --serve --port 3030\"",
+    "elm:install": "elm-package install",
+    "elm:package": "elm-package",
+    "repl": "elm-repl",
+    "test": "elm-test",
+    "test:coverage": "elm-coverage --elm-test ./node_modules/.bin/elm-test",
+    "test:watch": "run-s \"test --watch\""
+  },
+  "devDependencies": {
+    "create-elm-app": "1.10.4",
+    "cross-env": "5.1.5",
+    "elm": "0.18.0",
+    "elm-analyse": "0.14.2",
+    "elm-coverage": "0.1.7",
+    "elm-format": "0.6.1-alpha",
+    "elm-test": "0.18.12",
+    "npm-run-all": "4.1.3",
+    "prettier": "1.12.1"
+  },
+  "dependencies": {
+    "bootstrap": "4.1.1"
+  }
+}
