@@ -3,6 +3,11 @@
 - [Firemní semináře](http://d3s.mff.cuni.cz/teaching/commercial_workshops/)
 - [ElmPrague](https://www.meetup.com/ElmPrague/)
 
+- [presentation slides](slides/)
+- Running demo app
+  - [from the end of demo](http://2018-05-23-mff-demo-end.surge.sh)
+  - [prepared example](http://2018-05-23-mff-demo-prepared.surge.sh) - you can find code for this in [the `final` branch](https://github.com/elm-prague/2018-05-23-mff-demo/tree/final)
+
 ## Requirements
 
 * Node.js version based on `./.nvmrc`
